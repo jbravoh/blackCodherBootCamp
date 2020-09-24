@@ -1,0 +1,99 @@
+nav {
+    font-family: sans-serif , "Montserrat";
+    font-size: 16px;
+    text-align: right;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+
+nav a {
+    padding: 10px;
+    color: black;
+    text-decoration-line: none;
+    font-weight: bold
+}
+
+nav a:hover {
+    color: #177EE8;
+    font-weight: bold;
+}
+
+nav a:active {
+    border-bottom: 3px solid #E1A21E;
+    color: #177EE8;
+    font-weight: bold;
+}
+
+
+.line {
+    width: 40px;
+    height: 3px;
+    background-color: #E1A21E;
+}
+
+
+
+body {
+    background-color: #fff;
+}
+
+main {
+    width: 80%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+
+h1 {
+    font-family: sans-serif , "Montserrat";
+    color: #177EE8;
+    font-size: 80px;
+    text-align: center;
+    margin: 20px;
+    padding-top: 30px;
+   
+}
+
+
+h2 {
+    font-family: sans-serif , "Montserrat";
+    color: black;
+    font-size: 35px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+/* PRACTICE */
+
+section p { /* Decendent combinator*/
+    text-decoration: underline;
+}
+
+section > p { /* child combinator */
+    color: blue;
+}
+
+section ~ p { /* general sibling combinator*/
+    font-weight: bold;
+}
+
+section + p { /* adjacent sibling combinator*/
+    font-style: italic;
+}
+
+* {
+    color: orange; /* Universal Combinator. This has more specifity than the child combinator. */
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.box img {
+    max-width: 20%;
+}

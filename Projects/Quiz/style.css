@@ -1,0 +1,130 @@
+* {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url("/Images/avengersPoster.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bodyContainer {
+    background-color: white;  
+    margin: 40px 300px;
+    padding: 30px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.avengerAssemble {
+    font-size: 24px;
+    padding: 20px 15px;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin: 50px 240px 20px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.avengerAssemble:hover {
+    background-color:#1A1A64;
+    cursor: pointer;
+}
+
+.answerCorrect{
+    color: green;
+    display: none;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.marvelLogo {
+    height: 159px;
+    width: 352px;
+    
+}
+
+.title {
+    font-size: 60px; 
+    margin: 20px, 0;
+
+}
+
+.openingSentence {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.question {
+    text-align: center;
+    font-weight: bold;
+    color: #F0131E;
+    font-size: 20px;
+    padding: 30px 0;
+
+}
+
+.answerRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 20px;
+    padding: 5px 5px;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin: 10px 280px;
+    background-color: rgb(178, 209, 250);
+    
+}
+
+.answerRow:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.buttonSelected {
+    background-color: orange;
+}
+
+
+
+.answerVal {
+    padding: 0 10px; 
+}
+
+#submit {
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #453AA4;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    display: none;
+}
+
+#quiz {
+    display: none;
+}
+
+.errorMessage {
+    display: none;
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.answerCorrect {
+    background-color: limegreen;
+}
+    
