@@ -139,6 +139,9 @@ function buildQuiz(){
       //document.querySelectorAll(".answerCorrect").style.display="block";
     }
 
+   
+
+
     // show the questions
     showQuestions();
 
@@ -168,9 +171,31 @@ var myAnswers = [];
         $("#submit").show();
         $(".avengerAssemble").hide();
         $(".openingSentence").hide();
-        //$(".errorMessage").hide();
+        //$(".errorMessage").hide(
+        
     }
 
+    /*
+
+    function errorMessage() {
+        if ($(".errorMessage").show() && totalNumOfQA == myQuestions.length) {
+            $(".errorMessage").hide(); 
+        }
+    } */
 
 
-buildQuiz();
+    buildQuiz();
+
+    
+
+   
+
+
+
+
+
+
+/* TO DO LIST 
+- hide the reveal button when showing results 
+- hide the error message after all answers have been clicked
+- reveal the right and selected wrong answers (green and red)*/
