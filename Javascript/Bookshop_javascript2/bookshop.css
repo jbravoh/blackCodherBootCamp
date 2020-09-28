@@ -1,0 +1,59 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+.navbar {
+    font-size: 16px;
+}
+.navbar-brand {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px !important;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+form {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn {
+    border: black solid 1px;
+}
+
+.bookListContainer {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.bookProfileDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bookCard { 
+    width: 30%;
+    height: 500px;
+    padding: 20px;
+    margin: 20px;;
+    
+    
+  
+}
+
+.bookImage { 
+    height: 250px;
+}
+
+.title-h2 {
+    font-weight: bold; 
+    font-weight: 16px;
+}
+
+.bookAuthor {
+    margin-top: 20px;
+    font-weight: bold;
+}
