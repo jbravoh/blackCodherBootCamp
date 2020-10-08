@@ -1,0 +1,23 @@
+
+
+.bookCounterH1 {
+    color: black;
+    font-size: 40px;
+}
+
+.bookCounterButton {
+    background-color: black;
+    color: white;
+    font-size: 25px; 
+    padding: 5px;
+    font-weight: bold;
+}
+
+.bookCounterButton:hover {
+    background-color: darkgrey;
+}
+
+.bookList {
+    font-size: 20px;
+    font-weight: bold;
+}

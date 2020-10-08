@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { render } from '@testing-library/react';
 import App from './App'; //importing the app from App.js
 
@@ -8,7 +9,7 @@ test('renders learn react link', () => { // renders app from App.js - this npm t
   expect(linkElement).toBeInTheDocument(); // either true or false (true = passed, false = fail)
 });
 
-it('renders without crashing', () => { // this npm test failed
+it('renders without crashing', () => { // this NPM test passed as ReactDOM is imported
   const div = document.createElement('div');
   ReactDOM.render(<App />,div);
   });
