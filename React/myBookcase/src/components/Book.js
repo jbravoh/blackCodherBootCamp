@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import "../stylesheets/Book.css";
 
-const Book = (props) => { //
+const Book = (props) => { 
     let {
         id,
         volumeInfo: {title, authors, description, imageLinks: {thumbnail, smallThumbnail}},
@@ -14,13 +15,15 @@ const Book = (props) => { //
   });
 
     return (
-        <div>
-            <h2>{title}</h2>
-            <p>{authors ? authors.join(',') : "No Authors Listed"}</p> 
-            <p>{listPrice && formatter.format(listPrice.amount)}</p>
-            <p>{description}</p>
-            <img src={smallThumbnail || thumbnail} alt={title}/>
-            <button onClick={() => props.addBook(title, id)}> Add+ </button>
+        <div className="bookProfileContainer">
+               <img className="bookImage" src={smallThumbnail || thumbnail} alt={title}/> 
+            <div className="profileDisplay">
+                <h2 className="bookTitle">{title}</h2>
+                <p className="authors">{authors ? authors.join(' & ') : "No Authors Listed"}</p> 
+                <p className="bookPrice">{listPrice && formatter.format(listPrice.amount)}</p>
+                <button onClick={() => props.addBook(title, id)}> Add+ </button>
+            </div>
+            <p className="description">{description}</p>
         </div>
     );
 }

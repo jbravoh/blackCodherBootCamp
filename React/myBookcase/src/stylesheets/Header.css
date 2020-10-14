@@ -2,6 +2,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin: 10px;
 } 
 
 .linkContainer {
@@ -35,7 +36,7 @@
     text-decoration: none;
 }
 
-.navLink:active {
+.navLink a:active {
     color: purple;
     font-weight: bold;
 }
