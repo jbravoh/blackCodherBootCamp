@@ -5,6 +5,8 @@ import BookList from './components/BookList';
 import data from './models/books.json';
 import About from './pages/About';
 import Search from "./components/Search";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './stylesheets/Home.css';
 
 
 const App = (props) => { 
@@ -32,8 +34,8 @@ const App = (props) => {
         <Route exact path="/" render={() => (
           <React.Fragment>
             <Header />
-            <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword}/>
-            <BookList books={books} addBook={addBook}/>
+            <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} />
+            <BookList books={books} addBook={addBook} />
           </React.Fragment>
         )} />
 

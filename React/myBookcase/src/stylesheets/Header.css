@@ -1,0 +1,44 @@
+.headerContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+} 
+
+.linkContainer {
+    margin-left: 30px;;
+
+}
+
+.appTitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bold;
+    display: inline;
+    
+}
+
+
+
+.navLink {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: black;
+    padding-right: 15px;
+
+  
+  
+}
+
+.navLink:hover {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.navLink:active {
+    color: purple;
+    font-weight: bold;
+}
+
+
+

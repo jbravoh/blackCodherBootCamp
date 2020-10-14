@@ -1,13 +1,18 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import '../stylesheets/Header.css';
 
 const Header = () => {
     return (
         <React.Fragment>
-            <h1>My Bookcase</h1>
-            <Link to ="/">Home</Link>
-            <Link to ="/bookcase">Bookcase</Link>
-            <Link to ="/about">About</Link>
+        <div className="headerContainer">
+            <h1 className="appTitle">My Bookcase</h1>
+            <div className="linkContainer">
+                <Link className="navLink" to ="/">Home</Link>
+                <Link className="navLink" to ="/bookcase">Bookcase</Link>
+                <Link  className="navLink" to ="/about">About</Link>
+            </div>
+        </div>
         </React.Fragment>
     )
 }
