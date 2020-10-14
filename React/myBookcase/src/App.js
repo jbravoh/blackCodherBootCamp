@@ -39,18 +39,19 @@ const App = (props) => {
           </React.Fragment>
         )} />
 
-        <Route exact path="/bookcase" render={() => (
-          <React.Fragment>
-            <Header />
-          </React.Fragment>
-        )} />
-
         <Route exact path="/about" render={() => (
           <React.Fragment>
             <Header />
             <About />  
           </React.Fragment>
         )} /> 
+      
+
+        <Route exact path="/bookcase" render={() => (
+          <React.Fragment>
+            <Header />
+          </React.Fragment>
+        )} />
       </Router>
     </>
   );

@@ -9,12 +9,16 @@ const Header = () => {
             <h1 className="appTitle">My Bookcase</h1>
             <div className="linkContainer">
                 <Link className="navLink" to ="/">Home</Link>
-                <Link className="navLink" to ="/bookcase">Bookcase</Link>
                 <Link  className="navLink" to ="/about">About</Link>
+                <Link className="navLink" to ="/bookcase">Bookcase</Link>
+                
             </div>
         </div>
         </React.Fragment>
     )
 }
+
+
+
 
 export default Header; // always need to export page

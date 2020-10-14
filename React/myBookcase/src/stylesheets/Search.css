@@ -1,7 +1,8 @@
-.searchBar {
-    display: inline;
-} 
+.search {
+    margin-left: 15px;
+}
 
 .button {
     padding: 5px;
+    background: purple;
 }
