@@ -33,6 +33,15 @@ span {
     padding: 3px;
 }
 
+.searchSpan {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 5px;
+    border: 2px solid darkgrey;
+    font-size: 15px;
+}
+
 .aboutButton {
     background-color: purple;
     color: white;

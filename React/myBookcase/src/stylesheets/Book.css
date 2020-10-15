@@ -20,12 +20,15 @@
     flex-direction: column;
     margin-left: 15px;
     align-self: center;
+    
 }
 
 .bookTitle {
     font-weight: bold;
     font-size: 20px;
     color: purple;
+    /* figure out how to wrap it when screen display gets smaller*/
+    
 }
 
 .authors {

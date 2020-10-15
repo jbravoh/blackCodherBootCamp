@@ -6,7 +6,7 @@ const BookList = (props) => {
     return (
         <div>
             {props.books.map(book => (
-                <Book key={book.id} book={book} addBook={props.addBook}/> // use key as an identfier to find a specifc element
+                <Book key={book.id} book={book} addBook={props.addBook} removeBook={props.removeBook}/> // use key as an identfier to find a specifc element
             ))}
         </div>
   );

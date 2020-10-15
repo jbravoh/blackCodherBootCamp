@@ -12,12 +12,35 @@ import './stylesheets/Home.css';
 const App = (props) => { 
   const [books, setBooks] = useState(data); 
   const [keyword, setKeyword] = useState('');
+  const [bookcase, setBookcase] = useState([]); // this is to add books to the bookcase
+  
 
   function addBook(title, id) { // this function remove the book when it is clicked 
     const newBookList = books.filter(book => book.id !== id); // this only filt
+    const chosenBook = books.filter(book => book.id === id);
     setBooks(newBookList);
+    setBookcase([...bookcase, ...chosenBook]); // create an array and keep storing 
+
+  //   const remainingBooks = []
+  //   let chosenBook = null
+  //   books.forEach((book) => {
+  //   if (book.id !== id) {
+  //     remainingBooks.push(book);
+  //   } else {
+  //     chosenBook = book;
+  //   }
+  // // });
+
+  // setBooks(remainingBooks);
+  // setBookcase([...bookcase, chosen]);
+
     console.log(`The book ${title} was clicked`)
   } 
+
+  function removeBook(id) {
+    const newBookcaseList = books.filter(book => book.id !== id); 
+    setBookcase(newBookcaseList);
+  }
 
   async function findBooks(term) { 
     const results = await fetch
@@ -50,6 +73,7 @@ const App = (props) => {
         <Route exact path="/bookcase" render={() => (
           <React.Fragment>
             <Header />
+            <BookList books={bookcase} removeBook={removeBook}/>
           </React.Fragment>
         )} />
       </Router>

@@ -21,7 +21,18 @@ const Book = (props) => {
                 <h2 className="bookTitle">{title}</h2>
                 <p className="authors">{authors ? authors.join(' & ') : "No Authors Listed"}</p> 
                 <p className="bookPrice">{listPrice && formatter.format(listPrice.amount)}</p>
-                <button onClick={() => props.addBook(title, id)}> Add+ </button>
+                {props.addBook && (
+                    <button 
+                        onClick={() => props.addBook(title, id)}> 
+                        Add+ 
+                    </button>
+                )}
+                {props.removeBook && (
+                    <button 
+                        onClick={() => props.removeBook(id)}> 
+                        Remove 
+                    </button>
+                )}
             </div>
             <p className="description">{description}</p>
         </div>
