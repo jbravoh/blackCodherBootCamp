@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from 'react-router-dom';
 import '../stylesheets/Header.css';
+import Search from './Search';
 
-const Header = () => {
+const Header = (props) => {
+    // const [keyword, setKeyword] = useState('');
+
     return (
         <React.Fragment>
         <div className="headerContainer">
@@ -11,8 +14,8 @@ const Header = () => {
                 <Link className="navLink" to ="/">Home</Link>
                 <Link  className="navLink" to ="/about">About</Link>
                 <Link className="navLink" to ="/bookcase">Bookcase</Link>
-                
             </div>
+            <Search findBooks={props.findBooks} keyword={props.keyword} setKeyword={props.setKeyword} />
         </div>
         </React.Fragment>
     )

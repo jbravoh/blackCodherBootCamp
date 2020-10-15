@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { Form, Button} from 'react-bootstrap';
 import '../stylesheets/Search.css';
 
 const Search = (props) => {
@@ -10,7 +9,13 @@ const Search = (props) => {
         props.findBooks(props.keyword);
     }
     return (
-// // Bootstrap form 
+
+         <form className="search" onSubmit={handleSubmit}>
+            <input type="text" placeholder="Search Books..." value={props.keyword} onChange={(e) => props.setKeyword(e.target.value)}></input>  
+            <button className="searchButton">Search</button>
+        </form> 
+
+        // // Bootstrap form 
 //         <Form className="searchBar" onSubmit={handleSubmit}>
 //             <Form.Group controlId="searchKeyword">
 //                 {/* <Form.Label>Enter Search</Form.Label> */}
@@ -21,11 +26,6 @@ const Search = (props) => {
 //             Submit
 //             </Button>
 //         </Form>
-
-         <form className="search" onSubmit={handleSubmit}>
-            <input type="text" value={props.keyword} onChange={(e) => props.setKeyword(e.target.value)}></input>  
-            <button>Search</button>
-        </form> 
     );
 }
 

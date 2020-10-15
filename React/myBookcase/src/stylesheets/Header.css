@@ -20,6 +20,13 @@
     
 }
 
+.searchBar {
+    display: flex;
+    justify-content: right;
+    max-width: 20rem;
+
+}
+
 
 
 .navLink {

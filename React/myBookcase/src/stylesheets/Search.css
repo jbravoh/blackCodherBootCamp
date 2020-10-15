@@ -2,7 +2,12 @@
     margin-left: 15px;
 }
 
-.button {
+
+
+.searchButton {
     padding: 5px;
-    background: purple;
+    background: black;
+    color: white;
+    border-radius: 5px;
+   
 }
