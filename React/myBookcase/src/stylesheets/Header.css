@@ -1,54 +1,43 @@
 .headerContainer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10px;
-    background-color: purple;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  background-color: purple;
 }
 
 .linkContainer {
-    margin-left: 30px;;
-
+  margin-left: 30px;
 }
 
 .appTitle {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 50px;
-    font-weight: bold;
-    display: inline;
-    color: white;
-    
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 50px;
+  font-weight: bold;
+  display: inline;
+  color: white;
 }
 
 .searchBar {
-    display: flex;
-    justify-content: right;
-    max-width: 20rem;
-
+  display: flex;
+  justify-content: right;
+  max-width: 20rem;
 }
 
-
-
 .navLink {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    color: white;
-    padding-right: 15px;
-    font-weight: bold;
-
-  
-  
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: white;
+  padding-right: 15px;
+  font-weight: bold;
 }
 
 .navLink:hover {
-    color: plum;
-    text-decoration: none;
+  color: plum;
+  text-decoration: none;
 }
 
-.navLink a:active {
-    color: purple;
-    font-weight: bold;
+.navLink:focus {
+  color: black !important;
+  font-weight: bold;
 }
-
-
-

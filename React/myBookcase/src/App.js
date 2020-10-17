@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
 import BookList from "./components/BookList";
@@ -36,9 +36,18 @@ const App = (props) => {
     console.log(`The book ${title} was clicked`);
   }
 
+  useEffect(() => {
+    document.createTextNode = `${bookcase.length} books in the bookcase`;
+  }, [bookcase]);
+
+  // return (
+  //   <div>
+  //     <p>{bookcase} books in the bookcase.</p>
+  //   </div>
+  // );
+
   function removeBook(id) {
     const newBookcaseList = bookcase.filter((book) => book.id !== id);
-
     setBookcase(newBookcaseList);
   }
 
