@@ -1,0 +1,10 @@
+.bookcaseCount {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.total {
+  color: purple;
+}

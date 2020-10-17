@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/Header.css";
 import Search from "./Search";
 
 const Header = (props) => {
-  // const [keyword, setKeyword] = useState('');
 
   return (
     <React.Fragment>
@@ -27,6 +26,7 @@ const Header = (props) => {
           setKeyword={props.setKeyword}
         />
       </div>
+      
     </React.Fragment>
   );
 };

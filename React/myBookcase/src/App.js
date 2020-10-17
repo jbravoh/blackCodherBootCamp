@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
 import BookList from "./components/BookList";
@@ -15,7 +15,7 @@ const App = (props) => {
 
   function addBook(title, id) {
     // this function remove the book when it is clicked
-    const newBookList = books.filter((book) => book.id !== id); // this only filt
+    const newBookList = books.filter((book) => book.id !== id); // this only filters
     const chosenBook = books.filter((book) => book.id === id);
     setBooks(newBookList);
     setBookcase([...bookcase, ...chosenBook]); // create an array and keep storing
@@ -36,18 +36,13 @@ const App = (props) => {
     console.log(`The book ${title} was clicked`);
   }
 
-  useEffect(() => {
-    document.createTextNode = `${bookcase.length} books in the bookcase`;
-  }, [bookcase]);
-
-  // return (
-  //   <div>
-  //     <p>{bookcase} books in the bookcase.</p>
-  //   </div>
-  // );
+    useEffect(() => {
+      document.title = `${bookcase.length} books in the bookcase`;
+    }, [bookcase]);
 
   function removeBook(id) {
     const newBookcaseList = bookcase.filter((book) => book.id !== id);
+    // const chosenBook = books.filter((book) => book.id === id);
     setBookcase(newBookcaseList);
   }
 
@@ -71,8 +66,14 @@ const App = (props) => {
                 keyword={keyword}
                 setKeyword={setKeyword}
               />
+              <div>
+                <h2 className="bookcaseCount">
+                You have <span className="total">{bookcase.length}</span> book(s) in your bookcase.
+                </h2>
+              </div>
               {/* <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} /> */}
               <BookList books={books} addBook={addBook} />
+              
             </React.Fragment>
           )}
         />
@@ -94,11 +95,18 @@ const App = (props) => {
           render={() => (
             <React.Fragment>
               <Header />
+              <div>
+                <h2 className="bookcaseCount">
+                You have <span className="total">{bookcase.length}</span> book(s) in your bookcase.
+                </h2>
+              </div>
               <BookList books={bookcase} removeBook={removeBook} />
+              
             </React.Fragment>
           )}
         />
       </Router>
+      
     </>
   );
 };

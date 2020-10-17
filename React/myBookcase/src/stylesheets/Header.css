@@ -1,20 +1,22 @@
 .headerContainer {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding: 10px;
   background-color: purple;
+  flex-wrap: wrap;
 }
 
 .linkContainer {
   margin-left: 30px;
+  
 }
 
 .appTitle {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 50px;
   font-weight: bold;
-  display: inline;
+  /* display: inline; */
   color: white;
 }
 

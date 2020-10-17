@@ -1,72 +1,64 @@
 * {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .bookProfileContainer {
-    border-bottom: 1.5px solid purple;
-    margin: 15px;
-    padding: 20px 0;
-
+  border-bottom: 1.5px solid purple;
+  margin: 15px;
+  padding: 20px 0;
 }
 
 .bookImage {
-    display: inline-flex;
-    vertical-align: top;
-    
+  display: inline-flex;
+  vertical-align: top;
 }
 
 .profileDisplay {
-    display: inline-flex;
-    flex-direction: column;
-    margin-left: 15px;
-    align-self: center;
-    
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 15px;
+  align-self: center;
 }
 
 .bookTitle {
-    font-weight: bold;
-    font-size: 20px;
-    color: purple;
-    /* figure out how to wrap it when screen display gets smaller*/
-    
+  font-weight: bold;
+  font-size: 20px;
+  color: purple;
+  /* figure out how to wrap it when screen display gets smaller*/
 }
 
 .authors {
-    /* font-weight: bold; */
-    display: block ;
-    font-style: italic;
-    margin-bottom: 8px;
+  /* font-weight: bold; */
+  display: block;
+  font-style: italic;
+  margin-bottom: 8px;
 }
 
 .bookPrice {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .description {
-    max-height: 180px;
-    overflow-y: scroll;
-    border: 1.5px solid black;
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-top: 15px;
-    background: white;
-    background-color: plum;
-
-
+  max-height: 180px;
+  overflow-y: scroll;
+  border: 1.5px solid black;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 15px;
+  background: white;
+  background-color: plum;
 }
 
 button {
-    background-color: purple;
-    color: white;
-    font-weight: bold;
-    max-width: 5rem;
-    
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  max-width: 5rem;
 }
 
 button:hover {
-    font-weight: bold;
-    background-color: plum;
-    color: black;
-   
+  font-weight: bold;
+  background-color: plum;
+  color: black;
 }
