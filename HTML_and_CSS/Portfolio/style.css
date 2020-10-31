@@ -1,123 +1,134 @@
+/* 
+#FAFAFA
+#ff7e67
+#a2d5f2
+#07689f 
+*/
+
 body {
-    background-color: #177EE8;
-    margin: 0;
-    font-family: sans-serif , "Montserrat";
+  background-color: #a2d5f2;
+  margin: 0;
+  color: black;
+  font-family: "Montserrat", sans-serif;
 }
 
+hr {
+    background-color: #07689f;
+}
+
+/* h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+} */
+
+h3 {
+  font-size: 40px;
+  text-align: center;
+  margin: 20px;
+  font-family: "Montserrat", sans-serif;
+}
 
 #navbar {
-    background-color: black;
-    overflow: hidden;
-    width: 335px;
-
-
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 0 0 20px;
+  overflow: hidden;
+  width: 460px;
+  font-size: 16px;
 }
 
 #navbar a {
-    padding: 15px;
-    color: white;
-    text-decoration-line: none;
-    font-weight: bold;
-    float: left;
-    font-family: sans-serif , "Montserrat";
-    font-size: 16px;
+  padding: 15px;
+  color: white;
+  text-decoration-line: none;
+  font-weight: bold;
+  float: left;
 }
 
 #navbar a:hover {
-    color: #177EE8;
-    font-weight: bold;
+  color: #a2d5f2;
+  font-weight: bold;
 }
 #navbar a:active {
-    color: #177EE8;
-    font-weight: bold;
+  color: #a2d5f2
+  font-weight: bold;
 }
 
 /* Page content */
 .content {
-    padding: 16px;
-  }
-  
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-    padding-top: 60px;
-  }
+  padding: 16px;
+}
 
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
 
 #introContainer {
-    background-color:  #177EE8;
-    margin: 0px 40px;
-    padding: 100px 0 60px;
+  /* background-color: #a2d5f2; */
+  margin: 0px 40px;
+  padding: 60px 0 60px;
 }
- 
 
 #introTitle {
-    color: white;
-    font-size: 100px;
-    text-align: center;
-    margin: 0px;
-    padding-top: 20px;
-
-}
-
- #subheading {
-    color: black;
-    font-size: 40px;
-    text-align: center;
+  color: #07689f;
+  font-size: 100px;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  margin-bottom: 40px;
 }
 
 #summary {
-    color: white;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 100px 80px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 80px 120px;
 }
 
 #projectsContainer {
-    background-color: white;
-    padding: 20px;
+  background-color: #fafafa;
+  padding: 20px;
 }
 
 #aboutContainer {
-    padding: 20px 150px 80px;;
-    background-color: #177EE8;
-   
+  padding: 20px 150px 80px;
+  background-color: #fafafa;
 }
 
 .aboutFlex {
-    display: flex;
-    flex-direction: row;
-    
+  display: flex;
+  flex-direction: row;
 }
 
 #pictureOfMe {
-    height: 400px;
-    border: white solid 4px;
+  height: 400px;
+  border: #fafafa solid 4px;
 }
 
-h3 {
-    font-size: 40px;
-    text-align: center;
-    margin: 20px;
-
+#aboutMeP {
+  font-size: 20px;
+  margin: 40px 40px 40px 20px;
+  text-align: center;
+  font-weight: bold;
 }
 
-#aboutMeP { 
-    font-size: 20px; 
-    margin: 40px 40px 40px 20px;
-    color: white;
-    text-align: center;
-    font-weight: bold;
+#skillsContainer {
+  background-color: #fafafa;
+  padding: 20px;
+}
+
+.skillImage {
+    width: 200px;
 }
 
 #contactContainer {
-    background-color: white;
-    padding: 40px;
+  /* background-color: #a2d5f2; */
+  padding: 40px;
 }
