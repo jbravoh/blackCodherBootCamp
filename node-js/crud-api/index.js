@@ -106,6 +106,21 @@ app.put("profiles/:userId", (req, res) => {
 })
 
 
+//PATCH /profiles/:userId (PARTIAL UPDATE TO RESOURCE)
+app.patch("profiles/:userId", (req, res) => {
+    const idToUpdate = database.profiles[req.params.userId]
+    
+    database.profiles[idToUpdate] = {
+        ...databasde.profiles[idToUpdate],  
+        ...req.body
+    }
+
+    res.json( {
+        message: "User updated"
+    })
+})
+
+
 
 app.listen(4000, () => {
     console.log("Server is running!")
