@@ -4,7 +4,7 @@ const books = [
         name: "Between The World And Me",
         author: "by Ta-Nehisi Coates",
         price: "£7.99",
-        description: "A 2015 winner of the National Book Award for non-fiction, the renowned journalist and writer pens a profound letter to his son about what it means to be Black in America in the 21st century — a place in which you struggle to overcome the historical trauma of your people while trying to find your own purpose in the world",
+        description: "A 2015 winner of the National Book Award for non-fiction, the renowned journalist and writer pens a profound letter to his son about what it means to be Black in America in the 21st century — a place in which you struggle to overcome the historical trauma of your people while trying to find your own purpose in the world.",
         image: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1549482990-51ndtpPOGTL.jpg?crop=1xw:1xh;center,top&resize=768:*"
     },
     //Book2

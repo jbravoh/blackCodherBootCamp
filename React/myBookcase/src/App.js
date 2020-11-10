@@ -13,6 +13,7 @@ const App = (props) => {
   const [keyword, setKeyword] = useState("");
   const [bookcase, setBookcase] = useState([]); // this is to add books to the bookcase
 
+  
   function addBook(title, id) {
     // this function remove the book when it is clicked
     const newBookList = books.filter((book) => book.id !== id); // this only filters
@@ -110,5 +111,6 @@ const App = (props) => {
     </>
   );
 };
+
 
 export default App;
