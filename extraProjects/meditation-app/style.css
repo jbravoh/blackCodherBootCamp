@@ -22,6 +22,22 @@
     align-items: center;
 }
 
+.playerContainer {
+    position: relative;
+}
+
+.playerContainer, svg {
+    /* Positions both circle on top of each other */
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    /* The cirles were moved to the bottom right, so this positions it back center */
+    transform: translate(-50%,-50%);
+    /* Cannot click play button because circles are on top, this allows you to click on the button */
+    pointer-events: none;
+}
+
 .timeSelector {
     background: lightyellow;
 }
@@ -33,6 +49,16 @@
 .playerContainer {
     background: lightpink;
 }
+
+.timeDisplay {
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    font-size: 50px;
+}
+
+
+
 
 video {
     display: none;
