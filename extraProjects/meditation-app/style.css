@@ -38,17 +38,6 @@
     pointer-events: none;
 }
 
-.timeSelector {
-    background: lightyellow;
-}
-
-.soundPicker {
-    background: lightgreen;
-}
-
-.playerContainer {
-    background: lightpink;
-}
 
 .timeDisplay {
     position: absolute;
@@ -57,9 +46,30 @@
     font-size: 50px;
 }
 
-
-
-
 video {
-    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    /* z-index puts the element in the background */
+    z-index: -10;
+}
+
+.timeSelector button, .soundPicker button {
+    color: white;
+    width: 30%;
+    height: 10%;
+    background: none;
+    border: solid 2px white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    /* This transition affects the button's normal state and hover */
+    transition: all 0.5s ease
+}
+
+.timeSelector button:hover {
+    color: black;
+    background: white;
+
 }
