@@ -71,5 +71,29 @@ video {
 .timeSelector button:hover {
     color: black;
     background: white;
+}
 
+.soundPicker button {
+    border: none;
+    /* Add the same height and width so you can messa around with border-radius */
+    height: 120px; 
+    width: 120px; 
+    /* This combined with the width & height above makes it perfectly circular */
+    border-radius: 50%; 
+    padding: 30px;
+}
+
+/* This will constrain the image to the center of the button (before it was out of position) */
+.soundPicker button img {
+    height: 100%;
+}
+
+/* Style the first .soundPicker button */
+.soundPicker button:nth-child(1) {
+    background: #4972a1;
+}
+
+/* Style the second .soundPicker button */
+.soundPicker button:nth-child(2) {
+    background: #a14f49;
 }
