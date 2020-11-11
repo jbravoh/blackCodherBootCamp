@@ -109,13 +109,13 @@ app.use(cors());
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlenconded
 
-// //GET /profiles
-// app.get("/profiles", (req, res) => {
-//     res.json({
-//         status: "success",
-//         data: database.profiles
-//     })
-// })
+// //GET /books
+app.get("/books", (req, res) => {
+    res.json({
+        status: "success",
+        data: database.books
+    })
+})
 
 //GET /books /:id
 app.get("/books/:id", (req, res) => {
@@ -157,8 +157,8 @@ app.post("/books", (req, res) => {
 });
 
 //DELETE /books /:id
-app.delete("books/:id", (req, res) => {
-  delete database.books[req.params.idd]; // double check if this works
+app.delete("/books/:id", (req, res) => {
+  delete database.books[req.params.id]; // double check if this works
 
   res.status(200).json({
     //OK status code
@@ -168,7 +168,7 @@ app.delete("books/:id", (req, res) => {
 });
 
 //PUT /books/:id  (MODIFY ENTIRE RESOURCE - OVERWRITES)
-app.put("books/:id", (req, res) => {
+app.put("/books/:id", (req, res) => {
   const idToUpdate = database.books[req.params.id];
 
   database.books[idToUpdate] = req.body; // line that causes update to take effect
@@ -181,18 +181,18 @@ app.put("books/:id", (req, res) => {
 });
 
 //PATCH /books/:id (PARTIAL UPDATE TO RESOURCE)
-app.patch("books/:id", (req, res) => {
-  const idToUpdate = database.profiles[req.params.id];
+app.patch("/books/:id", (req, res) => {
+  const idToUpdate = database.books[req.params.id];
 
   database.books[idToUpdate] = {
     ...database.books[idToUpdate],
-    ...req.body, // "..." allows you to add data list and not replace it
+    ...req.body // "..." allows you to add data list and not replace it
   };
 
-  database.books[req.params.id] = {
-    ...database.books[req.params.id],
-    ...req.body,
-  };
+//   database.books[req.params.id] = {
+//     ...database.books[req.params.id],
+//     ...req.body,
+//   };
 
   res.status(200).json({
     // OK status codes
