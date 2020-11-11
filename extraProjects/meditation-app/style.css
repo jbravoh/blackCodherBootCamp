@@ -11,7 +11,7 @@
     align-items: center;
 }
 
-.timeSelector, .soundPicker{
+.timeSelector, .soundPicker, .playerContainer{
     height: 80%;
     flex: 1;
     /* Will put everuthing in a row */
