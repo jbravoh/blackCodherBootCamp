@@ -52,12 +52,12 @@ app.get ("/profiles/:userId", (req, res) => {
     const matchingProfile = database.profiles[req.params.userId]
 
     if (matchingProfile) {
-        res.json({
+        res.status(200).json({ // OK status code
             status: "success",
             data: matchingProfile
         })
     } else {
-        res.json({
+        res.status(401).json({  //"status(400) is a standard response (NOT FOUND) - look at http.cats"
             message: "Couldn't find a user with ID"
         })
     }
@@ -75,7 +75,7 @@ app.post("/profiles", (req, res) => {
 
     database.profiles[newKey] = req.body
 
-    res.json( {
+    res.status(201).json( { // created status code
         status: "success",
         message: `Created a profile with the ID of ${newKey}.`
     })
@@ -87,7 +87,7 @@ app.delete("profiles/:userId", (req, res) => {
 
     delete database.profiles[req.params.userId] // double check if this works 
 
-    res.json({
+    res.status(200).json({ //OK status code
         status: "success",
         message: `deleted profile ${userId}.`
     })
@@ -99,7 +99,7 @@ app.put("profiles/:userId", (req, res) => {
 
     database.profiles[idToUpdate] = req.body // line that causes update to take effect
 
-    res.json({
+    res.status(200).json({ //Modified status code
         status: "success",
         message: "User updated"
     })
@@ -111,11 +111,16 @@ app.patch("profiles/:userId", (req, res) => {
     const idToUpdate = database.profiles[req.params.userId]
     
     database.profiles[idToUpdate] = {
-        ...databasde.profiles[idToUpdate],  
+        ...database.profiles[idToUpdate],  
+        ...req.body // "..." allows you to add data list and not replace it 
+    }
+
+    database.profiles[req.params.userId] = {
+        ...database.profiles[req.params.userId],  
         ...req.body
     }
 
-    res.json( {
+    res.status(200).json( { // OK status codes
         message: "User updated"
     })
 })
