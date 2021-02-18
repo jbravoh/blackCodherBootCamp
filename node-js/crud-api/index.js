@@ -1,25 +1,7 @@
 const cors = require("cors");
 const express = require("express");
 
-// const jayannsProfile = {
-//     profiles: {
-//         1000: {
-//             firstName: "Jay-Ann",
-//             lastName: "Bravo-Harriott",
-//             prefernces: {
-//                 foods: ["Chinese", "Indian", "Jamaican"],
-//                 colour: "Black",
-//                 number: [8, 11]
-//             },
-//             hoursOfSleep: 8.5
-//         }
-//     }
-// }
-
 const database = {
-  // profiles: {
-  //     1000: jayannsProfile,
-  // },
   books: {
     0: {
       title: "Animal Farm",
@@ -109,15 +91,17 @@ app.use(cors());
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlenconded
 
-// //GET /books
-app.get("/books", (req, res) => {
-    res.json({
-        status: "success",
-        data: database.books
-    })
-})
+// === GET "/books" ===
 
-//GET /books /:id
+app.get("/books", (req, res) => {
+  res.json({
+    status: "success",
+    data: database.books,
+  });
+});
+
+// === GET "/books/:id" ===
+
 app.get("/books/:id", (req, res) => {
   console.log(req.params.id);
 
@@ -137,7 +121,8 @@ app.get("/books/:id", (req, res) => {
   }
 });
 
-// POST /books
+//  === POST "/books" ===
+
 app.post("/books", (req, res) => {
   console.log(req.body);
 
@@ -156,7 +141,7 @@ app.post("/books", (req, res) => {
   });
 });
 
-//DELETE /books /:id
+// === DELETE "/books/:id" ===
 app.delete("/books/:id", (req, res) => {
   delete database.books[req.params.id]; // double check if this works
 
@@ -167,7 +152,7 @@ app.delete("/books/:id", (req, res) => {
   });
 });
 
-//PUT /books/:id  (MODIFY ENTIRE RESOURCE - OVERWRITES)
+// === PUT "/books/:id" ===  (MODIFY ENTIRE RESOURCE - OVERWRITES)
 app.put("/books/:id", (req, res) => {
   const idToUpdate = database.books[req.params.id];
 
@@ -180,19 +165,14 @@ app.put("/books/:id", (req, res) => {
   });
 });
 
-//PATCH /books/:id (PARTIAL UPDATE TO RESOURCE)
+// === PATCH "/books/:id" === (PARTIAL UPDATE TO RESOURCE)
 app.patch("/books/:id", (req, res) => {
   const idToUpdate = database.books[req.params.id];
 
   database.books[idToUpdate] = {
     ...database.books[idToUpdate],
-    ...req.body // "..." allows you to add data list and not replace it
+    ...req.body, // "..." allows you to add data list and not replace it
   };
-
-//   database.books[req.params.id] = {
-//     ...database.books[req.params.id],
-//     ...req.body,
-//   };
 
   res.status(200).json({
     // OK status codes
